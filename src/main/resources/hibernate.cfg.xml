@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">DriveTech</property>
+		<property name="hibernate.connection.url">jdbc:mysql://54.88.17.100:3306/bidkraft</property>
+		<property name="hibernate.connection.username">handson</property> -->
+		
+		
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">DriveTech</property>
+		<property name="hibernate.connection.url">jdbc:mysql://54.88.17.100:3306/officenotes</property>
+		<property name="hibernate.connection.username">handson</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.autocommit">true</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- C3p0 -->
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">300</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_size">25</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_statement">0</property>
+		<property name="hibernate.c3p0.preferredTestQuery">select 1;</property>
+
+
+<mapping class="com.officenotes.entities.User"></mapping>
+<mapping class="com.officenotes.entities.Announcement"></mapping>	
+<mapping class="com.officenotes.entities.Device"></mapping>		
+<mapping class="com.officenotes.entities.Messages"></mapping>	
+	</session-factory>
+</hibernate-configuration>
